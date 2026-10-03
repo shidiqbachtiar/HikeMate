@@ -1,0 +1,409 @@
+/* =========================================
+   HIKE MATE - STYLE CSS
+   Tugas 3 - CSS
+   ========================================= */
+
+/* ---------- RESET DASAR ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2f2f2f;
+    background-color: #f4f7f3;
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+body > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- JUDUL ---------- */
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #245c3c;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2f6b46;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3d5f48;
+}
+
+
+/* ---------- PARAGRAF ---------- */
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- NAVIGASI ---------- */
+
+nav {
+    background-color: #245c3c;
+    padding: 14px 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #d9edcf;
+}
+
+
+/* ---------- LINK ---------- */
+
+a {
+    color: #286b45;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #173f29;
+}
+
+
+/* ---------- GAMBAR ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* ---------- HERO / BAGIAN UTAMA ---------- */
+
+.hero {
+    background-color: #dfeee2;
+    padding: 35px;
+    margin: 20px 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 0;
+    color: #245c3c;
+}
+
+.hero p {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- TABEL ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+th {
+    background-color: #245c3c;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #cfd8d1;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f5f1;
+}
+
+tr:hover {
+    background-color: #e1eee4;
+}
+
+
+/* ---------- LIST ---------- */
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+ul li::marker {
+    color: #2f6b46;
+}
+
+
+/* ---------- INFORMASI GUNUNG ---------- */
+
+.info-box {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #2f6b46;
+    border-radius: 6px;
+}
+
+.info-label {
+    font-weight: 700;
+    color: #245c3c;
+}
+
+
+/* ---------- FORM PENDAKIAN ---------- */
+
+form {
+    background-color: white;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    color: #2f4f3b;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b8c8bc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #fafcf9;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7caf8c;
+    border-color: #2f6b46;
+}
+
+
+/* ---------- RADIO & CHECKBOX ---------- */
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+.radio-group,
+.checkbox-group {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+button,
+input[type="submit"] {
+    background-color: #2f6b46;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #1f4c31;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    color: #607064;
+    font-size: 14px;
+    padding: 25px 10px;
+    margin-top: 40px;
+    border-top: 1px solid #ccd8ce;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        padding: 5px;
+    }
+
+    .hero {
+        padding: 25px 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 7px 5px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+
+    img {
+        margin: 15px auto;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    form {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
+}

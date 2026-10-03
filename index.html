@@ -3,98 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>HikeMate - Daftar Gunung</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>HikeMate</h1>
-    <p>Sistem Informasi Pendakian dan Kegiatan Pencinta Alam</p>
-</header>
-
-<nav>
-    <a href="index.html">Beranda</a>
-    <a href="detail-gunung.html">Detail Gunung</a>
-    <a href="daftar-pendakian.html">Daftar Pendakian</a>
-</nav>
-
-<main>
-
-    <article>
-        <h2>Daftar Gunung</h2>
+    <!-- Header -->
+    <header>
+        <h1>HikeMate</h1>
 
         <p>
-            Temukan informasi gunung dan jalur pendakian
-            untuk membantu merencanakan kegiatan pendakian.
+            Sistem Informasi Pendakian dan Kegiatan Pencinta Alam
         </p>
+    </header>
 
-        <img 
-            src="image/gunung-gede.jpg"
-            alt="Pemandangan Gunung Gede dari kawasan pendakian"
-        >
 
-        <h3>Informasi Gunung</h3>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Beranda</a>
+            </li>
 
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nama Gunung</th>
-                    <th>Lokasi</th>
-                    <th>Ketinggian</th>
-                    <th>Kesulitan</th>
-                    <th>Status</th>
-                    <th>Detail</th>
-                </tr>
-            </thead>
+            <li>
+                <a href="detail-gunung.html">Detail Gunung</a>
+            </li>
 
-            <tbody>
-                <tr>
-                    <td>Gunung Gede</td>
-                    <td>Jawa Barat</td>
-                    <td>2.958 mdpl</td>
-                    <td>Sedang</td>
-                    <td>Terbuka</td>
-                    <td>
-                        <a href="detail-gunung.html">Lihat Detail</a>
-                    </td>
-                </tr>
+            <li>
+                <a href="daftar-pendakian.html">Daftar Pendakian</a>
+            </li>
+        </ul>
+    </nav>
 
-                <tr>
-                    <td>Gunung Pangrango</td>
-                    <td>Jawa Barat</td>
-                    <td>3.019 mdpl</td>
-                    <td>Sulit</td>
-                    <td>Terbuka</td>
-                    <td>
-                        <a href="detail-gunung.html">Lihat Detail</a>
-                    </td>
-                </tr>
 
-                <tr>
-                    <td>Gunung Papandayan</td>
-                    <td>Jawa Barat</td>
-                    <td>2.665 mdpl</td>
-                    <td>Mudah</td>
-                    <td>Terbuka</td>
-                    <td>
-                        <a href="detail-gunung.html">Lihat Detail</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Main Content -->
+    <main>
 
-        <p>
-            <a href="daftar-pendakian.html">
-                Daftar Pendakian Sekarang
-            </a>
-        </p>
-    </article>
+        <!-- Hero Section -->
+        <div class="hero">
 
-</main>
+            <h2>Daftar Gunung</h2>
 
-<footer>
-    <p>&copy; 2026 HikeMate. Sistem Informasi Pendakian.</p>
-</footer>
+            <p>
+                Temukan informasi gunung dan jalur pendakian
+                untuk membantu merencanakan kegiatan pendakian.
+            </p>
+
+        </div>
+
+
+        <!-- Image -->
+        <div class="mountain-image">
+
+            <img
+                src="image/gunung-gede.jpg"
+                alt="Pemandangan Gunung Gede"
+            >
+
+        </div>
+
+
+        <!-- Informasi Gunung -->
+        <section class="info-box">
+
+            <h2>Informasi Gunung</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nama Gunung</th>
+                        <th>Lokasi</th>
+                        <th>Ketinggian</th>
+                        <th>Kesulitan</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Gunung Gede</td>
+                        <td>Jawa Barat</td>
+                        <td>2.958 mdpl</td>
+                        <td>Sedang</td>
+                        <td>Terbuka</td>
+
+                        <td>
+                            <a href="detail-gunung.html">
+                                Lihat Detail
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Gunung Pangrango</td>
+                        <td>Jawa Barat</td>
+                        <td>3.019 mdpl</td>
+                        <td>Sulit</td>
+                        <td>Terbuka</td>
+
+                        <td>
+                            <a href="detail-gunung.html">
+                                Lihat Detail
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Gunung Papandayan</td>
+                        <td>Jawa Barat</td>
+                        <td>2.665 mdpl</td>
+                        <td>Mudah</td>
+                        <td>Terbuka</td>
+
+                        <td>
+                            <a href="detail-gunung.html">
+                                Lihat Detail
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Link Daftar Pendakian -->
+        <div class="info-box">
+
+            <p>
+                <a href="daftar-pendakian.html">
+                    Daftar Pendakian Sekarang
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        &copy; 2026 HikeMate.
+        Sistem Informasi Pendakian.
+
+    </footer>
 
 </body>
 </html>

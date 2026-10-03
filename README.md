@@ -24,3 +24,27 @@ Menyediakan formulir untuk mencatat rencana kegiatan pendakian.
 
 ### Daftar Pendakian
 ![Daftar Pendakian](docs/screenshots/daftar-pendakian.png)
+
+## Tugas 3 - CSS
+
+Pada Tugas 3, project HikeMate dikembangkan dengan menerapkan
+CSS native menggunakan external stylesheet `style.css`.
+
+Penerapan CSS meliputi:
+
+- Font family, font size, dan font weight
+- Styling navigasi dan list
+- Text alignment
+- Warna background dan teks
+- Styling tabel
+- Styling form
+- Penggunaan div untuk pengelompokan elemen
+- Responsive design menggunakan media query
+
+### Screenshot Desktop
+
+![Tampilan Desktop](docs/screenshots/tugas3-desktop.png)
+
+### Screenshot Mobile
+
+![Tampilan Mobile](docs/screenshots/tugas3-mobile.png)
