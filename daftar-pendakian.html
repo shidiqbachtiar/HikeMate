@@ -4,209 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HikeMate - Daftar Pendakian</title>
+    <title>Daftar Pendakian - HikeMate</title>
 
-    <!-- External CSS -->
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <h1>HikeMate</h1>
-
-        <p>
-            Sistem Informasi Pendakian dan Kegiatan Pencinta Alam
-        </p>
+        <p>Sistem Informasi Pendakian dan Kegiatan Pencinta Alam</p>
     </header>
 
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">HikeMate</a>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Beranda</a>
-            </li>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarHikeMate"
+                aria-controls="navbarHikeMate"
+                aria-expanded="false"
+                aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <li>
-                <a href="detail-gunung.html">Detail Gunung</a>
-            </li>
-
-            <li>
-                <a href="daftar-pendakian.html">
-                    Daftar Pendakian
-                </a>
-            </li>
-        </ul>
+            <div class="collapse navbar-collapse" id="navbarHikeMate">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="detail-gunung.html">
+                            Detail Gunung
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="daftar-pendakian.html">
+                            Daftar Pendakian
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-
-    <!-- Main Content -->
-    <main>
-
-        <div class="hero">
-
-            <h2>Daftar Pendakian</h2>
-
+    <!-- KONTEN UTAMA -->
+    <main class="container">
+        <section class="hero">
+            <h2>Formulir Pendaftaran Pendakian</h2>
             <p>
-                Isi formulir berikut untuk mencatat rencana
-                kegiatan pendakian.
+                Lengkapi informasi berikut sebagai contoh pendaftaran
+                kegiatan pendakian melalui HikeMate.
             </p>
+        </section>
 
-        </div>
-
-
-        <!-- Form Pendakian -->
-        <form>
-
-            <!-- Nama -->
-            <label for="nama">
-                Nama Lengkap:
-            </label>
-
-            <input
-                type="text"
-                id="nama"
-                name="nama"
-                placeholder="Masukkan nama lengkap"
-            >
-
-
-            <!-- Email -->
-            <label for="email">
-                Email:
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Masukkan email"
-            >
-
-
-            <!-- Gunung -->
-            <label for="gunung">
-                Pilih Gunung:
-            </label>
-
-            <select id="gunung" name="gunung">
-
-                <option value="gede">
-                    Gunung Gede
-                </option>
-
-                <option value="pangrango">
-                    Gunung Pangrango
-                </option>
-
-                <option value="papandayan">
-                    Gunung Papandayan
-                </option>
-
-            </select>
-
-
-            <!-- Tanggal -->
-            <label for="tanggal">
-                Tanggal Pendakian:
-            </label>
-
-            <input
-                type="date"
-                id="tanggal"
-                name="tanggal"
-            >
-
-
-            <!-- Jenis Pendakian -->
-            <label>
-                Jenis Pendakian:
-            </label>
-
-            <div class="radio-group">
-
-                <label>
+        <section class="info-box">
+            <form action="#" method="post">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">
+                        Nama Lengkap
+                    </label>
                     <input
-                        type="radio"
-                        name="jenis"
-                        value="solo"
-                    >
-                    Solo
-                </label>
+                        type="text"
+                        class="form-control"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required>
+                </div>
 
-                <label>
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
                     <input
-                        type="radio"
-                        name="jenis"
-                        value="kelompok"
-                    >
-                    Kelompok
-                </label>
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="nama@email.com"
+                        required>
+                </div>
 
-            </div>
-
-
-            <!-- Jumlah Pendaki -->
-            <label for="jumlah">
-                Jumlah Pendaki:
-            </label>
-
-            <input
-                type="number"
-                id="jumlah"
-                name="jumlah"
-                min="1"
-                placeholder="Jumlah pendaki"
-            >
-
-
-            <!-- Catatan -->
-            <label for="catatan">
-                Catatan:
-            </label>
-
-            <textarea
-                id="catatan"
-                name="catatan"
-                placeholder="Tambahkan catatan pendakian..."
-            ></textarea>
-
-
-            <!-- Persetujuan -->
-            <div class="checkbox-group">
-
-                <label>
+                <div class="mb-3">
+                    <label for="telepon" class="form-label">
+                        Nomor Telepon
+                    </label>
                     <input
-                        type="checkbox"
-                        name="persetujuan"
-                    >
+                        type="tel"
+                        class="form-control"
+                        id="telepon"
+                        name="telepon"
+                        placeholder="Masukkan nomor telepon"
+                        required>
+                </div>
 
-                    Saya menyetujui aturan dan ketentuan pendakian.
-                </label>
+                <div class="mb-3">
+                    <label for="gunung" class="form-label">
+                        Pilihan Gunung
+                    </label>
+                    <select
+                        class="form-select"
+                        id="gunung"
+                        name="gunung"
+                        required>
+                        <option value="">-- Pilih Gunung --</option>
+                        <option value="Gunung Gede">Gunung Gede</option>
+                        <option value="Gunung Pangrango">Gunung Pangrango</option>
+                        <option value="Gunung Papandayan">Gunung Papandayan</option>
+                    </select>
+                </div>
 
-            </div>
+                <div class="mb-3">
+                    <label for="tanggal" class="form-label">
+                        Tanggal Pendakian
+                    </label>
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="tanggal"
+                        name="tanggal"
+                        required>
+                </div>
 
+                <div class="mb-3">
+                    <label for="jumlah" class="form-label">
+                        Jumlah Peserta
+                    </label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="jumlah"
+                        name="jumlah"
+                        min="1"
+                        placeholder="Masukkan jumlah peserta"
+                        required>
+                </div>
 
-            <!-- Submit -->
-            <input
-                type="submit"
-                value="Daftar Pendakian"
-            >
+                <div class="mb-3">
+                    <label for="catatan" class="form-label">
+                        Catatan Tambahan
+                    </label>
+                    <textarea
+                        class="form-control"
+                        id="catatan"
+                        name="catatan"
+                        rows="4"
+                        placeholder="Masukkan catatan jika ada"></textarea>
+                </div>
 
-        </form>
+                <button type="submit" class="btn btn-success">
+                    Kirim Pendaftaran
+                </button>
 
+                <a href="index.html" class="btn btn-outline-secondary ms-2">
+                    Kembali
+                </a>
+            </form>
+        </section>
     </main>
 
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-
-        &copy; 2026 HikeMate.
-        Sistem Informasi Pendakian.
-
+        <p>&copy; 2026 HikeMate. Sistem Informasi Pendakian.</p>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

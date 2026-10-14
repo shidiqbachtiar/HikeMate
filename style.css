@@ -1,7 +1,8 @@
 /* =========================================
-   HIKE MATE - STYLE CSS
-   Tugas 3 - CSS
+   HIKEMATE - STYLE CSS
+   Tugas 4 - Bootstrap 5
    ========================================= */
+
 
 /* ---------- RESET DASAR ---------- */
 
@@ -22,10 +23,40 @@ body {
 
 /* ---------- CONTAINER ---------- */
 
-body > * {
+header,
+main,
+footer {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Navbar Bootstrap membentang selebar layar */
+nav.navbar {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #245c3c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 
@@ -35,9 +66,6 @@ h1 {
     font-size: 32px;
     font-weight: 700;
     color: #245c3c;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
 }
 
 h2 {
@@ -62,44 +90,59 @@ p {
 }
 
 
-/* ---------- NAVIGASI ---------- */
+/* ---------- NAVIGASI BOOTSTRAP ---------- */
 
-nav {
-    background-color: #245c3c;
-    padding: 14px 20px;
+nav.navbar {
+    background-color: #245c3c !important;
+    padding: 10px 0;
     margin-top: 15px;
     margin-bottom: 25px;
     border-radius: 8px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+/* Nama aplikasi */
+nav.navbar .navbar-brand {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-nav li {
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-nav a:hover {
+nav.navbar .navbar-brand:hover {
     color: #d9edcf;
 }
 
+/* Daftar menu */
+nav.navbar .navbar-nav {
+    gap: 10px;
+}
 
-/* ---------- LINK ---------- */
+/* Tautan menu */
+nav.navbar .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link:focus {
+    color: #d9edcf;
+}
+
+/* Tombol hamburger pada layar mobile */
+nav.navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+    margin-top: 0;
+    padding: 6px 10px;
+}
+
+nav.navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(217, 237, 207, 0.35);
+}
+
+
+/* ---------- LINK UMUM ---------- */
 
 a {
     color: #286b45;
@@ -108,6 +151,15 @@ a {
 
 a:hover {
     color: #173f29;
+}
+
+/* Mempertahankan warna putih pada tautan navbar */
+nav.navbar a {
+    color: #ffffff;
+}
+
+nav.navbar a:hover {
+    color: #d9edcf;
 }
 
 
@@ -119,6 +171,20 @@ img {
     display: block;
     margin: 20px auto;
     border-radius: 10px;
+}
+
+/* Gambar utama HikeMate */
+.mountain-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mountain-image img {
+    width: 100%;
+    max-width: 800px;
+    max-height: 450px;
+    object-fit: cover;
+    margin: 20px auto;
 }
 
 
@@ -144,58 +210,10 @@ img {
 }
 
 
-/* ---------- TABEL ---------- */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: white;
-}
-
-th {
-    background-color: #245c3c;
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    padding: 12px;
-}
-
-td {
-    padding: 10px;
-    border: 1px solid #cfd8d1;
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #f0f5f1;
-}
-
-tr:hover {
-    background-color: #e1eee4;
-}
-
-
-/* ---------- LIST ---------- */
-
-ul,
-ol {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 6px;
-}
-
-ul li::marker {
-    color: #2f6b46;
-}
-
-
 /* ---------- INFORMASI GUNUNG ---------- */
 
 .info-box {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     margin: 20px 0;
     border-left: 5px solid #2f6b46;
@@ -208,10 +226,95 @@ ul li::marker {
 }
 
 
+/* ---------- TABEL ---------- */
+
+/* Styling tabel HTML biasa */
+.info-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.info-box table th {
+    background-color: #245c3c;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+}
+
+.info-box table td {
+    padding: 10px;
+    border: 1px solid #cfd8d1;
+    text-align: center;
+}
+
+.info-box table tbody tr:nth-child(even) {
+    background-color: #f0f5f1;
+}
+
+.info-box table tbody tr:hover {
+    background-color: #e1eee4;
+}
+
+/* Tabel Bootstrap */
+.table {
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.table thead th {
+    font-weight: 700;
+}
+
+.table-success {
+    --bs-table-bg: #dfeee2;
+    --bs-table-color: #245c3c;
+    --bs-table-border-color: #cfd8d1;
+}
+
+/* Tabel tetap dapat dibaca pada layar kecil */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* ---------- LIST ---------- */
+
+/* List biasa di luar navbar */
+main ul,
+main ol {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 6px;
+}
+
+main ul li::marker {
+    color: #2f6b46;
+}
+
+/* List navbar mengikuti Bootstrap */
+nav.navbar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+nav.navbar li {
+    margin-bottom: 0;
+}
+
+
 /* ---------- FORM PENDAKIAN ---------- */
 
-form {
-    background-color: white;
+/* Form HTML biasa yang tidak menggunakan card Bootstrap */
+form:not(.bootstrap-form) {
+    background-color: #ffffff;
     max-width: 700px;
     margin: 30px auto;
     padding: 30px;
@@ -219,6 +322,7 @@ form {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Label form */
 form label {
     display: block;
     font-weight: 600;
@@ -227,9 +331,10 @@ form label {
     margin-bottom: 5px;
 }
 
-input,
-select,
-textarea {
+/* Input HTML biasa */
+form:not(.bootstrap-form) input:not([type="radio"]):not([type="checkbox"]),
+form:not(.bootstrap-form) select,
+form:not(.bootstrap-form) textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #b8c8bc;
@@ -239,16 +344,51 @@ textarea {
     background-color: #fafcf9;
 }
 
+/* Textarea */
 textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+/* Fokus input HTML biasa */
+form:not(.bootstrap-form) input:focus,
+form:not(.bootstrap-form) select:focus,
+form:not(.bootstrap-form) textarea:focus {
     outline: 2px solid #7caf8c;
     border-color: #2f6b46;
+}
+
+
+/* ---------- FORM BOOTSTRAP ---------- */
+
+/* Mempertahankan styling Bootstrap pada form-control */
+.form-control,
+.form-select {
+    font-family: inherit;
+    font-size: 15px;
+    border-color: #b8c8bc;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #7caf8c;
+    box-shadow: 0 0 0 0.2rem rgba(47, 107, 70, 0.15);
+}
+
+/* Label Bootstrap */
+.form-label {
+    font-weight: 600;
+    color: #2f4f3b;
+}
+
+/* Card form */
+.card {
+    border-color: #dce5de;
+    border-radius: 12px;
+}
+
+.card-title {
+    color: #245c3c;
 }
 
 
@@ -269,10 +409,11 @@ input[type="checkbox"] {
 
 /* ---------- BUTTON ---------- */
 
-button,
-input[type="submit"] {
+/* Tombol form HTML biasa */
+form button:not(.btn),
+form input[type="submit"] {
     background-color: #2f6b46;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 11px 22px;
     border-radius: 6px;
@@ -282,9 +423,24 @@ input[type="submit"] {
     margin-top: 20px;
 }
 
-button:hover,
-input[type="submit"]:hover {
+form button:not(.btn):hover,
+form input[type="submit"]:hover {
     background-color: #1f4c31;
+}
+
+/* Tombol Bootstrap */
+.btn-success {
+    --bs-btn-bg: #2f6b46;
+    --bs-btn-border-color: #2f6b46;
+    --bs-btn-hover-bg: #1f4c31;
+    --bs-btn-hover-border-color: #1f4c31;
+    --bs-btn-active-bg: #173f29;
+    --bs-btn-active-border-color: #173f29;
+}
+
+/* Tombol outline */
+.btn-outline-secondary {
+    margin-top: 0;
 }
 
 
@@ -301,16 +457,20 @@ footer {
 
 
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    ========================================= */
 
 @media (max-width: 768px) {
 
     body {
         font-size: 15px;
-        padding: 0 15px;
     }
 
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1,
     h1 {
         font-size: 27px;
     }
@@ -319,31 +479,39 @@ footer {
         font-size: 22px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 8px;
+    nav.navbar {
+        padding: 10px 12px;
     }
 
-    nav a {
+    nav.navbar .navbar-nav {
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    nav.navbar .nav-link {
         display: block;
-        padding: 5px;
+        padding: 10px 12px;
     }
 
     .hero {
         padding: 25px 15px;
     }
 
-    table {
-        font-size: 13px;
+    .info-box {
+        padding: 15px;
     }
 
-    th,
-    td {
-        padding: 7px 5px;
+    .info-box table th,
+    .info-box table td {
+        padding: 8px 6px;
     }
 
-    form {
+    form:not(.bootstrap-form) {
         padding: 20px;
+    }
+
+    .mountain-image img {
+        max-height: 350px;
     }
 }
 
@@ -354,9 +522,13 @@ footer {
 
     body {
         font-size: 14px;
-        padding: 0 10px;
     }
 
+    header {
+        padding: 12px 10px;
+    }
+
+    header h1,
     h1 {
         font-size: 24px;
     }
@@ -369,16 +541,16 @@ footer {
         font-size: 18px;
     }
 
-    nav {
-        padding: 10px;
+    nav.navbar {
+        padding: 8px 10px;
+        border-radius: 6px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
+    nav.navbar .navbar-brand {
+        font-size: 18px;
     }
 
-    nav a {
+    nav.navbar .nav-link {
         font-size: 14px;
     }
 
@@ -390,20 +562,36 @@ footer {
         margin: 15px auto;
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+    .info-box {
+        padding: 12px;
     }
 
-    form {
+    .info-box table {
+        font-size: 13px;
+    }
+
+    .info-box table th,
+    .info-box table td {
+        padding: 7px 5px;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    form:not(.bootstrap-form) {
         padding: 15px;
         margin: 20px auto;
     }
 
-    input,
-    select,
-    textarea {
+    .form-control,
+    .form-select {
         font-size: 14px;
     }
+
+    footer {
+        font-size: 13px;
+        padding: 20px 10px;
+    }
+
 }
