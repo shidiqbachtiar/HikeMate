@@ -1,11 +1,10 @@
+
 /* =========================================
-   HIKEMATE - STYLE CSS
-   Tugas 4 - Bootstrap 5
+   HIKEMATE - TUGAS 5
+   JavaScript, jQuery, Bootstrap 5
    ========================================= */
 
-
-/* ---------- RESET DASAR ---------- */
-
+/* RESET DAN DASAR */
 * {
     box-sizing: border-box;
 }
@@ -20,9 +19,6 @@ body {
     background-color: #f4f7f3;
 }
 
-
-/* ---------- CONTAINER ---------- */
-
 header,
 main,
 footer {
@@ -31,76 +27,55 @@ footer {
     margin-right: auto;
 }
 
-/* Navbar Bootstrap membentang selebar layar */
-nav.navbar {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
-/* ---------- HEADER ---------- */
-
+/* HEADER */
 header {
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
+    margin: 10px 0;
     font-size: 32px;
     font-weight: 700;
     color: #245c3c;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 16px;
     margin-bottom: 10px;
 }
 
-
-/* ---------- JUDUL ---------- */
-
+/* JUDUL DAN PARAGRAF */
 h1 {
     font-size: 32px;
-    font-weight: 700;
     color: #245c3c;
 }
 
 h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
     font-size: 25px;
     font-weight: 700;
     color: #2f6b46;
-    margin-top: 30px;
 }
 
 h3 {
     font-size: 20px;
-    font-weight: 600;
     color: #3d5f48;
 }
 
-
-/* ---------- PARAGRAF ---------- */
-
 p {
-    font-size: 16px;
     margin-bottom: 15px;
 }
 
-
-/* ---------- NAVIGASI BOOTSTRAP ---------- */
-
+/* NAVBAR BOOTSTRAP */
 nav.navbar {
-    background-color: #245c3c !important;
+    max-width: 100%;
+    margin: 15px 0 25px;
     padding: 10px 0;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    background-color: #245c3c;
     border-radius: 8px;
 }
 
-/* Nama aplikasi */
 nav.navbar .navbar-brand {
     color: #ffffff;
     font-size: 20px;
@@ -111,72 +86,53 @@ nav.navbar .navbar-brand:hover {
     color: #d9edcf;
 }
 
-/* Daftar menu */
 nav.navbar .navbar-nav {
     gap: 10px;
+    list-style: none;
 }
 
-/* Tautan menu */
 nav.navbar .nav-link {
+    padding: 8px 12px;
     color: #ffffff;
-    text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-    padding: 8px 12px;
 }
 
 nav.navbar .nav-link:hover,
-nav.navbar .nav-link:focus {
+nav.navbar .nav-link:focus,
+nav.navbar .nav-link.active {
     color: #d9edcf;
 }
 
-/* Tombol hamburger pada layar mobile */
 nav.navbar .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.6);
-    margin-top: 0;
-    padding: 6px 10px;
 }
 
 nav.navbar .navbar-toggler:focus {
     box-shadow: 0 0 0 3px rgba(217, 237, 207, 0.35);
 }
 
-
-/* ---------- LINK UMUM ---------- */
-
+/* LINK */
 a {
     color: #286b45;
-    font-weight: 500;
 }
 
 a:hover {
     color: #173f29;
 }
 
-/* Mempertahankan warna putih pada tautan navbar */
-nav.navbar a {
-    color: #ffffff;
-}
-
-nav.navbar a:hover {
-    color: #d9edcf;
-}
-
-
-/* ---------- GAMBAR ---------- */
-
+/* GAMBAR */
 img {
+    display: block;
     max-width: 100%;
     height: auto;
-    display: block;
     margin: 20px auto;
     border-radius: 10px;
 }
 
-/* Gambar utama HikeMate */
 .mountain-image {
-    text-align: center;
     margin: 20px 0;
+    text-align: center;
 }
 
 .mountain-image img {
@@ -184,17 +140,21 @@ img {
     max-width: 800px;
     max-height: 450px;
     object-fit: cover;
-    margin: 20px auto;
 }
 
+.detail-image {
+    width: 100%;
+    max-width: 700px;
+    max-height: 400px;
+    object-fit: cover;
+}
 
-/* ---------- HERO / BAGIAN UTAMA ---------- */
-
+/* HERO */
 .hero {
-    background-color: #dfeee2;
-    padding: 35px;
     margin: 20px 0;
+    padding: 35px;
     border-radius: 12px;
+    background-color: #dfeee2;
     text-align: center;
 }
 
@@ -209,13 +169,11 @@ img {
     margin-right: auto;
 }
 
-
-/* ---------- INFORMASI GUNUNG ---------- */
-
+/* KOTAK INFORMASI */
 .info-box {
-    background-color: #ffffff;
-    padding: 20px;
     margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
     border-left: 5px solid #2f6b46;
     border-radius: 6px;
 }
@@ -225,47 +183,26 @@ img {
     color: #245c3c;
 }
 
-
-/* ---------- TABEL ---------- */
-
-/* Styling tabel HTML biasa */
-.info-box table {
+/* TABEL */
+.table-responsive {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #ffffff;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.info-box table th {
-    background-color: #245c3c;
-    color: #ffffff;
-    font-weight: 700;
-    text-align: center;
-    padding: 12px;
-}
-
-.info-box table td {
-    padding: 10px;
-    border: 1px solid #cfd8d1;
-    text-align: center;
-}
-
-.info-box table tbody tr:nth-child(even) {
-    background-color: #f0f5f1;
-}
-
-.info-box table tbody tr:hover {
-    background-color: #e1eee4;
-}
-
-/* Tabel Bootstrap */
 .table {
     margin-bottom: 20px;
     vertical-align: middle;
 }
 
 .table thead th {
-    font-weight: 700;
+    color: #ffffff;
+    background-color: #245c3c;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
 }
 
 .table-success {
@@ -274,17 +211,7 @@ img {
     --bs-table-border-color: #cfd8d1;
 }
 
-/* Tabel tetap dapat dibaca pada layar kecil */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-
-/* ---------- LIST ---------- */
-
-/* List biasa di luar navbar */
+/* LIST */
 main ul,
 main ol {
     padding-left: 25px;
@@ -294,13 +221,11 @@ main li {
     margin-bottom: 6px;
 }
 
-main ul li::marker {
+main li::marker {
     color: #2f6b46;
 }
 
-/* List navbar mengikuti Bootstrap */
 nav.navbar ul {
-    list-style: none;
     padding-left: 0;
     margin-bottom: 0;
 }
@@ -309,59 +234,22 @@ nav.navbar li {
     margin-bottom: 0;
 }
 
-
-/* ---------- FORM PENDAKIAN ---------- */
-
-/* Form HTML biasa yang tidak menggunakan card Bootstrap */
-form:not(.bootstrap-form) {
-    background-color: #ffffff;
+/* FORMULIR */
+#formPendakian {
     max-width: 700px;
-    margin: 30px auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Label form */
-form label {
-    display: block;
+.form-label {
+    margin-bottom: 5px;
     font-weight: 600;
     color: #2f4f3b;
-    margin-top: 15px;
-    margin-bottom: 5px;
 }
 
-/* Input HTML biasa */
-form:not(.bootstrap-form) input:not([type="radio"]):not([type="checkbox"]),
-form:not(.bootstrap-form) select,
-form:not(.bootstrap-form) textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #b8c8bc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 15px;
-    background-color: #fafcf9;
-}
-
-/* Textarea */
-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-/* Fokus input HTML biasa */
-form:not(.bootstrap-form) input:focus,
-form:not(.bootstrap-form) select:focus,
-form:not(.bootstrap-form) textarea:focus {
-    outline: 2px solid #7caf8c;
-    border-color: #2f6b46;
-}
-
-
-/* ---------- FORM BOOTSTRAP ---------- */
-
-/* Mempertahankan styling Bootstrap pada form-control */
 .form-control,
 .form-select {
     font-family: inherit;
@@ -375,60 +263,12 @@ form:not(.bootstrap-form) textarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(47, 107, 70, 0.15);
 }
 
-/* Label Bootstrap */
-.form-label {
-    font-weight: 600;
-    color: #2f4f3b;
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
 }
 
-/* Card form */
-.card {
-    border-color: #dce5de;
-    border-radius: 12px;
-}
-
-.card-title {
-    color: #245c3c;
-}
-
-
-/* ---------- RADIO & CHECKBOX ---------- */
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 6px;
-}
-
-.radio-group,
-.checkbox-group {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-
-/* ---------- BUTTON ---------- */
-
-/* Tombol form HTML biasa */
-form button:not(.btn),
-form input[type="submit"] {
-    background-color: #2f6b46;
-    color: #ffffff;
-    border: none;
-    padding: 11px 22px;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-form button:not(.btn):hover,
-form input[type="submit"]:hover {
-    background-color: #1f4c31;
-}
-
-/* Tombol Bootstrap */
+/* TOMBOL */
 .btn-success {
     --bs-btn-bg: #2f6b46;
     --bs-btn-border-color: #2f6b46;
@@ -438,30 +278,31 @@ form input[type="submit"]:hover {
     --bs-btn-active-border-color: #173f29;
 }
 
-/* Tombol outline */
-.btn-outline-secondary {
-    margin-top: 0;
+.btn-outline-success {
+    --bs-btn-color: #2f6b46;
+    --bs-btn-border-color: #2f6b46;
+    --bs-btn-hover-bg: #2f6b46;
+    --bs-btn-hover-border-color: #2f6b46;
 }
 
+/* NOTIFIKASI */
+#pesanPendaftaran {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
 
-/* ---------- FOOTER ---------- */
-
+/* FOOTER */
 footer {
-    text-align: center;
+    margin-top: 40px;
+    padding: 25px 10px;
+    border-top: 1px solid #ccd8ce;
     color: #607064;
     font-size: 14px;
-    padding: 25px 10px;
-    margin-top: 40px;
-    border-top: 1px solid #ccd8ce;
+    text-align: center;
 }
 
-
-/* =========================================
-   RESPONSIVE DESIGN
-   ========================================= */
-
+/* RESPONSIVE TABLET */
 @media (max-width: 768px) {
-
     body {
         font-size: 15px;
     }
@@ -501,12 +342,7 @@ footer {
         padding: 15px;
     }
 
-    .info-box table th,
-    .info-box table td {
-        padding: 8px 6px;
-    }
-
-    form:not(.bootstrap-form) {
+    #formPendakian {
         padding: 20px;
     }
 
@@ -515,11 +351,8 @@ footer {
     }
 }
 
-
-/* ---------- MOBILE ---------- */
-
+/* RESPONSIVE MOBILE */
 @media (max-width: 576px) {
-
     body {
         font-size: 14px;
     }
@@ -558,30 +391,16 @@ footer {
         padding: 20px 10px;
     }
 
-    img {
-        margin: 15px auto;
-    }
-
     .info-box {
         padding: 12px;
-    }
-
-    .info-box table {
-        font-size: 13px;
-    }
-
-    .info-box table th,
-    .info-box table td {
-        padding: 7px 5px;
     }
 
     .table {
         font-size: 13px;
     }
 
-    form:not(.bootstrap-form) {
+    #formPendakian {
         padding: 15px;
-        margin: 20px auto;
     }
 
     .form-control,
@@ -590,8 +409,7 @@ footer {
     }
 
     footer {
-        font-size: 13px;
         padding: 20px 10px;
+        font-size: 13px;
     }
-
 }

@@ -1,123 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Daftar Pendakian - HikeMate</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- CSS Eksternal -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
         <h1>HikeMate</h1>
         <p>Sistem Informasi Pendakian dan Kegiatan Pencinta Alam</p>
     </header>
 
-    <!-- NAVBAR BOOTSTRAP -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">HikeMate</a>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarHikeMate"
-                aria-controls="navbarHikeMate"
-                aria-expanded="false"
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarHikeMate"
+                aria-controls="navbarHikeMate" aria-expanded="false"
                 aria-label="Buka navigasi">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarHikeMate">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="detail-gunung.html">
-                            Detail Gunung
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="daftar-pendakian.html">
-                            Daftar Pendakian
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detail-gunung.html">Detail Gunung</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="daftar-pendakian.html">Daftar Pendakian</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- KONTEN UTAMA -->
     <main class="container">
         <section class="hero">
             <h2>Formulir Pendaftaran Pendakian</h2>
-            <p>
-                Lengkapi informasi berikut sebagai contoh pendaftaran
-                kegiatan pendakian melalui HikeMate.
-            </p>
+            <p>Isi informasi berikut untuk mencoba simulasi pendaftaran pendakian.</p>
         </section>
 
         <section class="info-box">
-            <form action="#" method="post">
+            <form id="formPendakian" novalidate>
                 <div class="mb-3">
-                    <label for="nama" class="form-label">
-                        Nama Lengkap
-                    </label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="nama"
-                        name="nama"
-                        placeholder="Masukkan nama lengkap"
-                        required>
+                    <label for="namaPendaki" class="form-label">Nama Lengkap</label>
+                    <input type="text" id="namaPendaki" name="nama"
+                        class="form-control" placeholder="Masukkan nama lengkap" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">
-                        Email
-                    </label>
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="nama@email.com"
-                        required>
+                    <label for="emailPendaki" class="form-label">Email</label>
+                    <input type="email" id="emailPendaki" name="email"
+                        class="form-control" placeholder="nama@email.com" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="telepon" class="form-label">
-                        Nomor Telepon
-                    </label>
-                    <input
-                        type="tel"
-                        class="form-control"
-                        id="telepon"
-                        name="telepon"
-                        placeholder="Masukkan nomor telepon"
-                        required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="gunung" class="form-label">
-                        Pilihan Gunung
-                    </label>
-                    <select
-                        class="form-select"
-                        id="gunung"
-                        name="gunung"
-                        required>
+                    <label for="pilihanGunung" class="form-label">Pilihan Gunung</label>
+                    <select id="pilihanGunung" name="gunung" class="form-select" required>
                         <option value="">-- Pilih Gunung --</option>
                         <option value="Gunung Gede">Gunung Gede</option>
                         <option value="Gunung Pangrango">Gunung Pangrango</option>
@@ -126,61 +66,44 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="tanggal" class="form-label">
-                        Tanggal Pendakian
-                    </label>
-                    <input
-                        type="date"
-                        class="form-control"
-                        id="tanggal"
-                        name="tanggal"
-                        required>
+                    <label for="tanggalPendakian" class="form-label">Tanggal Pendakian</label>
+                    <input type="date" id="tanggalPendakian" name="tanggal"
+                        class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="jumlah" class="form-label">
-                        Jumlah Peserta
-                    </label>
-                    <input
-                        type="number"
-                        class="form-control"
-                        id="jumlah"
-                        name="jumlah"
-                        min="1"
-                        placeholder="Masukkan jumlah peserta"
-                        required>
+                    <label for="jumlahPeserta" class="form-label">Jumlah Peserta</label>
+                    <input type="number" id="jumlahPeserta" name="jumlah"
+                        class="form-control" min="1" step="1"
+                        placeholder="Masukkan jumlah peserta" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="catatan" class="form-label">
-                        Catatan Tambahan
-                    </label>
-                    <textarea
-                        class="form-control"
-                        id="catatan"
-                        name="catatan"
-                        rows="4"
-                        placeholder="Masukkan catatan jika ada"></textarea>
+                    <label for="catatan" class="form-label">Catatan Tambahan</label>
+                    <textarea id="catatan" name="catatan" class="form-control"
+                        rows="3" placeholder="Opsional"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-success">
-                    Kirim Pendaftaran
-                </button>
+                <button type="submit" class="btn btn-success">Kirim Pendaftaran</button>
+                <button type="reset" id="tombolResetForm" class="btn btn-outline-secondary">Reset Form</button>
 
-                <a href="index.html" class="btn btn-outline-secondary ms-2">
-                    Kembali
-                </a>
+                <div id="pesanPendaftaran" class="alert mt-3"
+                    role="status" aria-live="polite" style="display: none;"></div>
             </form>
+        </section>
+
+        <section class="info-box">
+            <h2>Catatan</h2>
+            <p>Formulir ini hanya simulasi frontend. Data pendaftaran tidak dikirim ke server dan tidak disimpan secara permanen.</p>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 HikeMate. Sistem Informasi Pendakian.</p>
     </footer>
 
-    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
